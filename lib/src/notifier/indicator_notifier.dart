@@ -635,6 +635,7 @@ abstract class IndicatorNotifier extends ChangeNotifier {
         if (_mode == IndicatorMode.done &&
             position.maxScrollExtent != position.minScrollExtent) {
           if ((_result == IndicatorResult.fail ||
+                  _result == IndicatorResult.success ||
                   (_result == IndicatorResult.noMore &&
                       _canProcessAfterNoMore)) &&
               oldOffset != null &&
